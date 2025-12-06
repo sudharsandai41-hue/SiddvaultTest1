@@ -1,0 +1,7 @@
+{
+  "name": "SIDDVAULT",
+  "description": "A museum-grade digital vault for vinyl record preservation and intelligence.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

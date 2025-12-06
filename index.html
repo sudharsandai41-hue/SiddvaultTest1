@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIDDVAULT | Vinyl Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Cormorant Garamond', 'serif'],
+            },
+            colors: {
+              amber: {
+                50: '#fdf4f2',
+                100: '#fbe6e3',
+                200: '#f7cfca',
+                300: '#F57F5B', // Page Background Match
+                400: '#e6766a',
+                500: '#DD5341', // Primary Brand Color (Reddish-Orange)
+                600: '#c43e2d',
+                700: '#a33123',
+                800: '#794A3A', // Secondary Brand Color (Earthy Brown)
+                900: '#643a2d',
+                950: '#361d16',
+              },
+              vault: {
+                900: '#0c0c0e',
+                800: '#18181b',
+                700: '#27272a',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F57F5B;
+        color: #ffffff;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F57F5B;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #794A3A;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #DD5341;
+      }
+      
+      /* Scanning Animation */
+      @keyframes scan {
+        0% { top: -20%; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { top: 120%; opacity: 0; }
+      }
+      .animate-scan {
+        animation: scan 2s linear infinite;
+        background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5), transparent);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "html2canvas": "https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.esm.js",
+    "jszip": "https://esm.sh/jszip@3.10.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
